@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FaithWear</title>
+  <link rel="stylesheet" href="css/general.css"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="icon" href="image/main.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header>
+    <a href="index.html" class="header-title">FaithWear</a>
+    <div class="burger-menu" id="burger-toggle" onclick="toggleMobileMenu();">&#9776;</div>
+    <nav class="product-categories-container">
+      <a href="index.html" class="product-info-text">Главная</a>
+      <a href="catalog.html" class="product-info-text">Каталог</a> 
+      <a href="catalog.html?category=tshirt" class="product-info-text" onclick="filterProducts('tshirt'); return false;">Футболки</a>
+      <a href="catalog.html?category=hoodie" class="product-info-text" onclick="filterProducts('hoodie'); return false;">Худи</a>
+      <a href="#" class="product-info-text" onclick="openCart(); return false;"><img class="cart" src="image/shop-cart.svg" alt=""></a>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html" class="mobile-menu-item">Главная</a>
+      <a href="catalog.html" class="mobile-menu-item">Каталог</a>
+      <a href="catalog.html?category=tshirt" class="mobile-menu-item" onclick="toggleMobileMenu();filterProducts('tshirt'); return false;">Футболки</a>
+      <a href="catalog.html?category=hoodie" class="mobile-menu-item" onclick="toggleMobileMenu();filterProducts('hoodie'); return false;">Худи</a>
+      <a href="#" id="cart-header" class="mobile-menu-item" onclick="toggleMobileMenu(); openCart(); return false;">Корзина</a>
+    </div>
+    <div id="toast" class="toast">Товар добавлен в корзину</div>
+  </header>
+  <main>
+    <section class="faith-wear-styles">
+      <p class="popular-text">Популярные товары</p>
+        <div class="product-card-listing">
+          <div class="product-card">
+              <div class="image-container">
+                  <a href="product.html?productId=1">
+                      <img src="image/card-1.svg" class="oversized-tshirt-card" alt="">
+                  </a>
+                  <button class="icon-button" id="product1">
+                      <img src="image/cart.svg" alt="Корзина" class="icon-image">
+                  </button>
+              </div>
+              <a href="product.html?productId=1">
+                  <div class="oversized-shirt-details">
+                      <p class="oversized-tshirt-heading">Футболка оверсайз <br>“All For His Glory”</p>
+                      <p class="price-tag-bold-centered">180 BYN</p>
+                  </div>
+              </a>
+          </div>
+          <div class="product-card">
+              <div class="image-container">
+                  <a href="product.html?productId=2">
+                      <img src="image/card-2.svg" class="oversized-tshirt-card" alt="">
+                  </a>
+                  <button class="icon-button" id="product2">
+                      <img src="image/cart.svg" alt="Корзина" class="icon-image">
+                  </button>
+              </div>
+              <a href="product.html?productId=2">
+                  <div class="oversized-shirt-details">
+                      <p class="oversized-tshirt-heading">Футболка оверсайз <br>“Bullet Proof Vest”</p>
+                      <p class="price-tag-bold-centered">170 BYN</p>
+                  </div>
+              </a>
+          </div>
+          <div class="product-card">
+              <div class="image-container">
+                  <a href="product.html?productId=3">
+                      <img src="image/card-3.svg" class="oversized-tshirt-card" alt="">
+                  </a>
+                  <button class="icon-button" id="product3">
+                      <img src="image/cart.svg" alt="Корзина" class="icon-image">
+                  </button>
+              </div>
+              <a href="product.html?productId=3">
+                  <div class="oversized-shirt-details">
+                      <p class="oversized-tshirt-heading">Худи оверсайз<br>“God’s Plan”</p>
+                      <p class="price-tag-bold-centered">220 BYN</p>
+                  </div>
+              </a>
+          </div>
+          <div class="product-card">
+              <div class="image-container">
+                  <a href="product.html?productId=4">
+                      <img src="image/card-4.svg" class="oversized-tshirt-card" alt="">
+                  </a>
+                  <button class="icon-button" id="product4">
+                      <img src="image/cart.svg" alt="Корзина" class="icon-image">
+                  </button>
+              </div>
+              <a href="product.html?productId=4">
+                  <div class="oversized-shirt-details">
+                      <p class="oversized-tshirt-heading">Худи оверсайз<br>“Faith Bear”</p>
+                      <p class="price-tag-bold-centered">220 BYN</p>
+                  </div>
+              </a>
+          </div>
+        </div>
+        <div class="model-list-container1">
+          <div class="model-list-container">
+            <a href="catalog.html" class="center-aligned-text-block">Смотреть все модели</a>
+          </div>
+        </div>
+      <div class="faithwear-advantages-container">
+        <div class="faithwear-text">
+          <p class="faithwear-heading">О нас</p>
+          <div class="divine-text-styles">
+            <p class="faithwear-description">
+              FaithWear — бренд одежды с христианским посланием. Лаконичный дизайн, комфорт и вдохновляющие принты с символикой веры — в нашей ДНК. Мы создаем стильную одежду, которая гармонирует с любым гардеробом и несет свет и надежду в мир.
+            </p>
+          </div>
+        </div>
+        <div class="feature-list-container">
+          <div class="vertical-card-group">
+            <img src="image/advantage-1.svg" class="product-feature-card" />
+            <p class="product-info-card">Качественная продукция</p>
+          </div>
+          <div class="vertical-card-group">
+            <img src="image/advantage-2.svg" class="product-feature-card" />
+            <p class="product-info-card">Доступные цены</p>
+          </div>
+          <div class="vertical-card-group">
+            <img src="image/advantage-3.svg" class="product-feature-card" />
+            <p class="product-info-card">Постоянные акции</p>
+          </div>
+          <div class="vertical-card-group">
+            <img src="image/advantage-4.svg" class="product-feature-card" />
+            <p class="product-info-card">Быстрая доставка</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+          <span class="close-button" onclick="closeCart()">&times;</span>
+          <h2>Корзина</h2>
+          <div id="cart-items" class="cart-items"></div>
+          <div class="cart-total">
+              <p id="cart-summary">Итоговая стоимость:  <span id="total-price">0 BYN</span></p>
+          </div>
+          <a href="#" class="pay-button" id="pay-button">Оплатить</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-section">
+      <div class="faithwear-section">
+        <p class="christian-message-heading">FaithWear</p>
+        <p class="christian-message-style">FaithWear — бренд одежды с христианским посланием.</p>
+        <p class="faithwear-copyright">© 2025 FaithWear. Все права защищены.</p>
+      </div>
+      <div class="contact-info-container">
+        <a class="heading-text-block">Быстрая связь</a>
+          <p class="primary-heading">+375291234567</p>
+          <p class="highlighted-text1">FaithWear@gmail.com</p>
+      </div>
+      <div class="customer-info-panel">
+        <p class="heading-text-block"><a class="primary-heading-link" href="info.html">Покупателям</a></p>
+          <p class="primary-heading"><a class="primary-heading-link" href="info.html#delivery">Доставка</a></p>
+          <p class="highlighted-text1"><a class="primary-heading-link" href="info.html#pay">Оплата</a></p>
+          <p class="highlighted-text1"><a class="primary-heading-link" href="info.html#newsletter-subscription-section">Рассылка</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/header.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/payment.js"></script>
+</body>
+</html>

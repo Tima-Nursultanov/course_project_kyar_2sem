@@ -1,0 +1,243 @@
+.urban-streetwear-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-width: 100%;
+  padding: 23px 58px 31px;
+}
+
+.product-card-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.oversized-tshirt-card {
+  box-sizing: border-box;
+  display: block;
+  width: 290px;
+  max-width: 100%;
+  height: 446px;
+  border: none;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.product-card {
+  justify-content: space-between;
+  margin-left: 28px;
+  flex-direction: column;
+  min-height: 470px;
+}
+
+.oversized-tshirt-heading {
+  padding: 0 9px;
+  font-size: 32px;
+  font-weight: 900;
+  font-family: 'PlayfairDisplay', serif;
+  color: black;
+  margin: 0px;
+  margin-bottom: 5px;
+}
+
+.price-tag-bold-centered {
+  width: 120px;
+  font-family: "Letterhead";
+  font-size: 24px;
+  color: black;
+  text-align: left;
+  text-transform: uppercase;
+  margin: 0px;
+  padding: 0 9px;
+}
+
+.product-details-container {
+  padding: 0 9px;
+  margin-top: 10px;
+}
+
+.size-label-text-style {
+  color: black;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "TTNorms", serif;
+  margin: 0;
+}
+
+.size-options-container {
+  display: flex;
+  gap: 22px;
+  align-items: stretch;
+  margin-top: 12px;
+  height: 35px;
+}
+
+.size-selector-dropdown {
+  padding: 5px;
+  font-weight: 500;
+  font-family: "TTNorms", serif;
+}
+
+.size-selector-dropdown > * {
+width: 100%;
+}
+
+.size-selector-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 73px;
+  background: white;
+  border: 1px solid black;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: black;
+  border-radius: 2px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.size-selector-button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.bold-text-container {
+  margin: 0px;
+  padding: 0 9px;
+}
+
+.urban-faith-bold {
+  font-size: 17px;
+  font-family: 'OpenSans', sans-serif;
+  color: #5b5b5b;
+  text-align: left;
+  margin: 0px;
+}
+
+.shopping-button-container {
+  display: flex;
+  padding-left: 10px;
+  margin: 0px;
+  justify-content: flex-start;
+}
+
+.icon-button {
+  display: flex;
+  justify-content: center;
+  max-width: 200px;
+  width: 100%;
+  background: black;
+  border: none;
+  color: white;
+  font-family: "TTNorms", serif;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 2px;
+  padding: 10px;
+  transition: transform 0.2s ease;
+}
+
+.icon-button:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .urban-streetwear-container {
+    padding: 10px;
+  }
+
+  .product-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .oversized-tshirt-card {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+
+  .price-tag-bold-centered {
+    font-size: 20px;
+  }
+
+  .size-label-text-style {
+    font-size: 18px;
+  }
+
+  .size-options-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .size-selector-button {
+    width: 100%;
+  }
+
+  .shopping-button-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    margin-top: 5px;
+    padding: 0px;
+  }
+
+  .icon-button {
+    width: 100%;
+  }
+
+  .add-to-cart-button {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .urban-faith-bold {
+    font-size: 14px;
+  }
+
+  .product-card {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .product-card .oversized-tshirt-card {
+    width: auto;
+    height: 100%;
+  }
+
+  .price-tag-bold-centered {
+    font-size: 24px;
+  }
+
+  .size-options-container {
+    margin-top: 9px;
+  }
+
+  .bold-text-container,
+  .shopping-button-container,
+  .product-details-container {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .urban-streetwear-container {
+    padding: 38px 58px 38px;
+  }
+
+  .product-card-container {
+    justify-content: flex-start;
+  }
+
+  .price-tag-bold-centered {
+    font-size: 24px;
+  }
+}

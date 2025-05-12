@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/payment.css"/>
+  <link rel="stylesheet" href="css/general.css"/>
+  <title>Оплата</title>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="header-title">FaithWear</a>
+    <div class="burger-menu" id="burger-toggle" onclick="toggleMobileMenu();">&#9776;</div>
+    <nav class="product-categories-container">
+      <a href="index.html" class="product-info-text">Главная</a>
+      <a href="catalog.html" class="product-info-text">Каталог</a>
+      <a href="catalog.html?category=tshirt" class="product-info-text" onclick="filterProducts('tshirt'); return false;">Футболки</a>
+      <a href="catalog.html?category=hoodie" class="product-info-text" onclick="filterProducts('hoodie'); return false;">Худи</a>
+      <a href="#" class="product-info-text" onclick="openCart(); return false;"><img class="cart" src="image/shop-cart.svg" alt=""></a>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html" class="mobile-menu-item">Главная</a>
+      <a href="catalog.html" class="mobile-menu-item">Каталог</a>
+      <a href="catalog.html?category=tshirt" class="mobile-menu-item" onclick="toggleMobileMenu();filterProducts('tshirt'); return false;">Футболки</a>
+      <a href="catalog.html?category=hoodie" class="mobile-menu-item" onclick="toggleMobileMenu();filterProducts('hoodie'); return false;">Худи</a>
+      <a href="#" id="cart-header" class="mobile-menu-item" onclick="toggleMobileMenu(); openCart(); return false;">Корзина</a>
+    </div>
+    <div id="toast" class="toast">Товар добавлен в корзину</div>
+  </header>
+  <main>
+    <div class="pay-container">
+      <div class="checkout-container">
+        <div class="left-section">
+          <h2 class="delivery-text">Доставка и оплата</h2>
+          <form id="payment-form">
+            <input type="text" id="name" class="input-field" placeholder="Имя (необязательно)">
+            <input type="text" id="surname" class="input-field" placeholder="Фамилия" required>
+            <input type="email" id="address" class="input-field" placeholder="Email" required>
+            <input type="text" id="address" class="input-field" placeholder="Адрес" required>
+            <input type="text" id="apartment" class="input-field" placeholder="Квартира, комната и т.д. (необязательно)">
+            <input type="text" id="postcode" class="input-field" placeholder="Почтовый индекс" required>
+            <input type="text" id="city" class="input-field" placeholder="Город" required>
+
+            <div class="card-details">
+              <h3>Данные карты</h3>
+              <input type="text" id="card-number" class="input-field" placeholder="Номер карты" maxlength="19" required>
+              <input type="text" id="card-holder" class="input-field" placeholder="Имя на карте" required>
+              <input type="text" id="expiry-date" class="input-field" placeholder="Срок действия (MM/YY)" maxlength="5" required>
+              <input type="text" id="cvc" class="input-field" placeholder="CVC/CVV" maxlength="3" required>
+            </div>
+
+            <button type="submit" class="submit-payment-button">Купить сейчас</button>
+          </form>
+          <p class="success-message" id="success-message">Ваш заказ успешно оформлен! Спасибо!</p>
+        </div>
+
+        <div class="right-section" id="right-section">
+          <h2>Итог заказа</h2>
+          <div class="order-summary" id="order-summary"></div>
+          <div class="total">
+            <span>Общий</span>
+            <span id="total-price">0,00 BYN</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-section">
+      <div class="faithwear-section">
+        <p class="christian-message-heading">FaithWear</p>
+        <p class="christian-message-style">FaithWear — бренд одежды с христианским посланием.</p>
+        <p class="faithwear-copyright">© 2025 FaithWear. Все права защищены.</p>
+      </div>
+      <div class="contact-info-container">
+        <a class="heading-text-block">Быстрая связь</a>
+          <p class="primary-heading">+375291234567</p>
+          <p class="highlighted-text1">FaithWear@gmail.com</p>
+      </div>
+      <div class="customer-info-panel">
+        <p class="heading-text-block"><a class="primary-heading-link" href="info.html">Покупателям</a></p>
+          <p class="primary-heading"><a class="primary-heading-link" href="info.html#delivery">Доставка</a></p>
+          <p class="highlighted-text1"><a class="primary-heading-link" href="info.html#pay">Оплата</a></p>
+          <p class="highlighted-text1"><a class="primary-heading-link" href="info.html#newsletter-subscription-section">Рассылка</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/header.js"></script>
+  <script src="js/payment.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

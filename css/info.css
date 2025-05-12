@@ -1,0 +1,225 @@
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 5px;
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+  color: #000;
+}
+
+h2 {
+  margin: 0px;
+}
+
+.info-container p, .info-container ul, .info-container li {
+  font-family: "TTNorms", serif;
+}
+
+.info-container h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #000;
+}
+
+.info-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.info-container ul {
+  margin: 0;
+  padding-left: 24px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.info-container li {
+  margin-bottom: 10px;
+  display: flex;
+  overflow-wrap: break-word;
+}
+
+.info-container li img {
+  width: 36px;
+  height: 36px;
+  margin-right: 2px;
+}
+
+.list-title {
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .info-container {
+    padding: 20px;
+  }
+  .info-container h2 {
+    font-size: 24px;
+  }
+  .info-container p {
+    font-size: 16px;
+  }
+  .info-container ul {
+    padding-left: 5px;
+  }
+  .info-container li {
+    font-size: 16px;
+  }
+  .info-container li img {
+    width: 30px;
+    height: 30px;
+  }
+}
+.newsletter-subscription-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-right: 27px;
+  padding-left: 26px;
+  margin-top: 20px;
+}
+
+.border-divider {
+  border-top: 1px solid black;
+  width: 100%;
+}
+
+.personalized-offers-section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  margin-top: 37px;
+  width: 100%;
+}
+
+.newsletter-section {
+  max-width: 100%;
+  text-align: center;
+  font-family: "TTNorms", serif;
+}
+
+.personal-offers-heading {
+  font-weight: 500;
+  font-size: 30px;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.newsletter-subscription-text {
+  margin: 0px;
+  margin-top: 18px;
+  font-size: 22px;
+  font-weight: 400;
+  color: black;
+}
+
+.newsletter-subscription-bar1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#email-input {
+  box-sizing: border-box;
+  padding: 12px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 2px;
+  font-family: "TTNorms", serif;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+#subscribe-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "TTNorms", serif;
+  font-size: 18px;
+  font-weight: 600;
+  background: black;
+  color: white;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 2px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+#subscribe-button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.success-message {
+  font-family: "OpenSans", sans-serif;
+  display: none;
+  text-align: center;
+  font-size: 24px;
+  color: green;
+}
+
+@media (max-width: 768px) {
+  .newsletter-subscription-section {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .personalized-offers-section {
+    margin-top: 20px;
+  }
+  .newsletter-section {
+    max-width: 100%;
+  }
+  .personal-offers-heading {
+    font-size: 24px;
+  }
+  .newsletter-subscription-text {
+    font-size: 18px;
+  }
+  .email-input {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .subscribe-button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .email-input {
+    font-size: 14px;
+  }
+  .subscribe-button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}/*# sourceMappingURL=info.css.map */
