@@ -150,6 +150,9 @@
   .urban-streetwear-container {
     padding: 10px;
   }
+  .product-card {
+    margin-left: 0px;
+  }
   .product-card-container {
     flex-direction: column;
     align-items: center;
